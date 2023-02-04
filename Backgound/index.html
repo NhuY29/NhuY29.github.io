@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Học làm background</title>
+        <style>
+            /* background và lớp giả */
+            .header{
+                width: calc(100px*2);
+                height: 100px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url(https://th.bing.com/th/id/R.cfb62e61ed16f78e02987d43ae41a088?rik=jJo9QfBjEsaWcA&pid=ImgRaw&r=0), linear-gradient(0,rgb(255,255,255),rgb(22,22,22));
+                /* background-image: linear-gradient(0, rgba(255,255,255,0.5),rgba(0,50,50,0.5)),url(https://th.bing.com/th/id/R.cfb62e61ed16f78e02987d43ae41a088?rik=jJo9QfBjEsaWcA&pid=ImgRaw&r=0); */
+            }
+            .Box{
+                width: 100px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: aqua;
+                color: black;
+            }
+            h1:hover {
+                color: red;
+            }
+            h2:active{
+                color: violet;
+            }
+            li:first-child{
+                color: brown;
+            }
+            li:last-child{
+                color: aqua;
+            }
+            .Box:active{
+                background-color: blue;
+                color: brown;
+            }
+            /* phần tử giả */
+            h1::first-letter{
+                color: violet;
+                font-size: 100px;
+            }
+            h1::first-line{
+                color: brown;
+            }
+            h3::selection
+            {
+                color: chocolate;
+                background-color: lightpink;
+            }
+            .Box::before{
+                width: 50px;
+                height: 50px;
+                content: "hello";
+                color: bisque;
+                display: block;
+                background-color: black;
+            }
+            .Box::after{
+                width: 50px;
+                height: 50px;
+                content: "hello";
+                display: block;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body> 
+        <h1>Hello cả nhà <br /> Mình là Như Ý <br/> Tạm biệt </h1>
+        <h2>Học hành zui ze </h2>
+        <h3>ố de de de de</h3>
+        <div class="header"></div>
+        <div class="Box">Box nè</div>
+        <ul>
+            <li>Nguyễn</li>
+            <li>Thị</li>
+            <li>Như</li>
+            <li>Ý</li>
+        </ul>
+    </body>
+</html>
