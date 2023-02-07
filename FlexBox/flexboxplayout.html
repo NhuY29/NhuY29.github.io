@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Học flexBox</title>
+        <!-- Navbar -->
+        <style>
+            .Nav{
+                height: 25px;
+                width: 100%;
+                background-color: orangered;
+                display: flex;
+                justify-content: space-between;
+            }
+            .Nav-list{
+                padding-left: 0;
+                margin: auto 16px;
+            }
+            .Nav-item{
+                color: aliceblue;
+                margin: 0 8px;
+                display: inline-block;
+            }
+        </style>
+        <!-- Form Layout -->
+        <style>
+            .Form-Container{
+                max-width: 720px;
+                padding: 32px;
+                margin: 36px auto 0 auto;
+                background-color:antiquewhite;
+            }
+            .form-row{
+                padding: 8px 0;
+                display: flex;
+            }
+            .form-label{
+                min-width: 90px;
+            }
+            .form-input{
+                flex: 1;
+            }
+        </style>
+        <!-- Column Layout -->
+        <style>
+            .column-layout{
+                background-color:lightgrey;
+                margin-top: 36px;
+                padding: 12px 0;
+                display: flex;
+            }
+            .column-item{
+                padding: 0 16px;
+            }
+            .Tin-Nong{
+                flex: 1;
+            }
+            .Thoi-Tiet{
+                flex: 2;
+            }
+            .Chuong-Trinh{
+                flex: 1;
+            }
+        </style>
+        <!-- Feature Layout -->
+        <style>
+            .Feature{
+                margin-top: 36px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            @media(min-width: 740px) {
+                .Feature{
+                    flex-direction: row;
+                }
+            }
+           .Feature-item{
+                padding: 12px 16px;
+                margin-top: 16px;
+                flex-basis: 30%;
+            }
+            .Feature-item:nth-child(1)
+            {
+                background-color: rgba(222, 13, 33, 1);
+            }
+            .Feature-item:nth-child(2)
+            {
+                background-color: rgba(44, 234, 255, 1);
+            }
+            .Feature-item:nth-child(3)
+            {
+                background-color: rgba(255, 11, 88, 1);
+            }
+        </style>
+        <!-- wrap layout -->
+        <style>
+            .wrap-layout{
+                background-color: bisque;
+                margin-top: 36px;
+                padding: 12px 0 32px 0;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            .wrap-layout_item{
+                width: 148px;
+                height: 90px;
+                color: aliceblue;
+                background-color: brown;
+                font-size: 48px;
+                text-align: center;
+                line-height: 90px;
+                margin-top: 20px;
+                font-weight: 700px;
+            }
+        </style>
+        <!-- Center Layout -->
+
+        <style>
+            .center-layout{
+                background-color: rgba(77, 92, 13, 1);
+                margin: 36px auto 0 auto;
+                padding: 32px 0;
+                height: 360px;
+                max-width: 640px;
+                display: flex;
+            }
+            .center-layout_item{
+                font-size: 42px;
+                font-weight: 700px;
+                margin: auto;
+            }
+        </style>
+        <!-- Chart Layout -->
+        <style>
+            .chart-layout{
+                margin: 36px auto 0 auto;
+                padding: 32px 0;
+                height: 320px;
+                background-color: #fff;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-end;
+            }
+            .chart-layout_item{
+                width: 60px;
+                color: #fff;
+                text-align: center;
+                height: var(--percent);
+                background-color: rgba(222, 13, 33, 1);
+                animation: growth ease-in 0.5s;
+            }
+            @keyframes growth
+            {
+                from{
+                    opacity: 0;
+                    height: calc(var(--percent)-50%);
+                }
+                to{
+                    opacity: 1;
+                    height: var(--percent);
+                }
+            }
+        </style>
+        <!-- End -->
+        <style>
+            .the-end{
+                margin: 12px auto 48px auto;
+                padding: 32px 0;
+                max-width: 740px;
+                min-height: 360px;
+                display: flex;
+            }
+            .the-end_first{
+                padding: 4px 16px;
+                background: #333;
+                flex: 1;
+            }
+            .the-end_second{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .the-end_second-one{
+                padding: 4px 16px;
+                background-color: rgba(222, 55, 89, 1);
+                flex: 1;
+            }
+            .the-end_second-two{
+                padding: 4px 16px;
+                background-color: rgba(211, 22, 44, 1);
+                flex: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div class="Nav">
+            <ul class="Nav-list">
+                <li class="Nav-item">Giới Thiệu</li>
+                <li class="Nav-item">Kết Nối</li>
+                <li class="Nav-item">Tải Ứng Dụng</li>
+            </ul>
+            <ul class="Nav-list">
+                <li class="Nav-item">Đăng Kí</li>
+                <li class="Nav-item">Đăng Nhập</li>
+            </ul>
+        </div>
+        <!-- Form Layout -->
+        <div class="Form-Container">
+            <div class="form-row">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-input" type="text" name="" id="">
+            </div>
+            <div class="form-row">
+                <label class="form-label" for="name">PassWord</label>
+                <input class="form-input" type="text" name="" id="">
+            </div>
+        </div>
+        <!-- Column Layout -->
+        <div class="column-layout">
+            <div class="column-item Tin-Nong">
+                <h2>Tin Mới Hôm nay</h2>
+                <p>Tàu nước ngoài chở hơn 4.500 ôtô phát cháy trên biển Vũng Tàu,đơn vị đang tích cực phối hợp với các cơ quan chức năng triển khai các biện pháp để sẵn sàng chữa cháy tàu AH SHIN (quốc tịch Panama) chở 4.530 ôtô bất ngờ phát cháy khi đang trên hành trình qua vùng biển Vũng Tàu.</p>
+            </div>
+            <div class="column-item Thoi-Tiet">
+                <h2>Thời Tiết Hôm Nay</h2>
+                <p>TP.HCM có mây, ngày không mưa, nhiệt độ trong khoảng 24-34 độ C</p>
+                <p>Hải Phòng nhiều mây,có mưa phùn và sương mù, nhiệt độ khoảng 18-23 độ C</p>
+                <p>Cao Bằng nhiều mây, có mưa nhỏ, nhiệt độ trong khoảng 15-20 độ C</p>
+                <p>Hà Giang nhiều mây, có mưa, mưa rào, nhiệt độ trong khoảng 19-23 độ C</p>
+            </div>
+            <div class="column-item Chuong-Trinh">
+                <h2>Chương Trình </h2>
+                <p>Đứng số 1 trong các chương trình truyền hình thực tế Hàn Quốc không có ứng cử viên nào sáng giá hơn Running Man. Đây là chương trình được sản xuất bởi đài KBS, có số người xem kỷ lục và độ nổi tiếng trên toàn thế giới. Đến nay chương trình đã chiếu được 10 năm nhưng độ hot chưa bao giờ suy giảm mà ngược lại ratings vẫn ngày một tăng cao.</p>
+            </div>
+        </div>
+        <!-- Feature Layout -->
+        <div class="Feature">
+            <div class="Feature-item ">
+                <h2>Lợi ích của Internet</h2>
+                <p>Internet là một kho dự trữ rất nhiều thông tin đa ngành nghề trên thế giới giúp con người có thể tra cứu và tìm kiếm thông tin khi cần. Là nơi trung gian để hoạt động kinh doanh online phát triển thuận lợi hơn</p>
+            </div>
+            <div class="Feature-item">
+                <h2>Lợi ích của TV</h2>
+                <p>Internet là một kho dự trữ rất nhiều thông tin đa ngành nghề trên thế giới giúp con người có thể tra cứu và tìm kiếm thông tin khi cần. Là nơi trung gian để hoạt động kinh doanh online phát triển thuận lợi hơn</p>
+            </div>
+            <div class="Feature-item">
+                <h2>Lợi ích của đọc sách</h2>
+                <p>Một trong những lợi ích của làm việc nhóm chính là tăng năng suất công việc. Khi làm việc nhóm, các công việc sẽ được chia thành các nhiệm vụ nhỏ và mỗi cá nhân sẽ phụ trách phần việc phù hợp với năng lực của mình. Do đó, mỗi thành viên trong nhóm sẽ chỉ tập trung làm một phần việc nhất định giúp chất lượng và hiệu suất làm việc tăng cao hơn.</p>
+            </div>
+        </div>
+        <!-- Wrap Layout -->
+        <div class="wrap-layout">
+            <div class="wrap-layout_item">1</div>
+            <div class="wrap-layout_item">2</div>
+            <div class="wrap-layout_item">3</div>
+            <div class="wrap-layout_item">4</div>
+            <div class="wrap-layout_item">5</div>
+        </div>
+        <!-- Center Layout -->
+        <div class="center-layout">
+            <h3 class="center-layout_item"> Center Item</h3>
+        </div>
+        <!-- Chart -->
+        <div class="chart-layout">
+            <div class="chart-layout_item" style="--percent: 10%">10%</div>
+            <div class="chart-layout_item" style="--percent: 50%">50%</div>
+            <div class="chart-layout_item" style="--percent: 20%">20%</div>
+            <div class="chart-layout_item" style="--percent: 80%">80%</div>
+            <div class="chart-layout_item" style="--percent: 40%">40%</div>
+            <div class="chart-layout_item" style="--percent: 70%">70%</div>
+            <div class="chart-layout_item" style="--percent: 100%">100%</div>
+            <div class="chart-layout_item" style="--percent: 60%">60%</div>
+            <div class="chart-layout_item" style="--percent: 30%">30%</div>
+            <div class="chart-layout_item" style="--percent: 50%">50%</div>
+        </div>
+        <!-- End -->
+        <div class="the-end ">
+            <div class="the-end_first">
+                <p>Infinity challenge là chương trình tạp kĩ thực tế của Hàn Quốc. Năm 2015, chương trình phát sóng số đầu tiên, sau 13 năm dài phát sóng (năm 2018) Infinity challenge chính thức kết thúc trong sự nuối tiếc của fan hâm mộ.</p>
+                <p>Tuy không còn được phát sóng nữa nhưng chương trình quốc dân này vẫn chiếm được cảm tình của rất nhiều khán giả. Tiếng cười được tạo nên từ những tình huống thử thách rất khó thực hiện và đôi khi có phần vô lý.</p>
+            </div>
+            <div class="the-end_second">
+                <div class="the-end_second-one">
+                    <p>Running Man Running Man là chương trình truyền hình thực tế nổi tiếng do đài SBS sản xuất. ...</p>
+                </div>
+                <div class="the-end_second-two">
+                    <p>Infinity Challenge – Thử thách cực đại Infinity Challenge là một trong những chương trình thực tế tồn tại lâu nhất trong nền giải trí Hàn Quốc. ...</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
