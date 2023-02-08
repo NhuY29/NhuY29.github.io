@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Làm button nè </title>
+        <style>
+            body > div{
+                margin: auto;
+            }
+            .btn{
+                background-color: transparent;
+                outline: none;
+                border: none;
+                text-decoration: none;
+                color: #fff;
+                padding: 12px 48px;
+                border-radius: 50px;
+                /* margin-left: 16px; */
+                cursor: pointer;
+                transition: opacity 0.2s ease;
+                margin-top: 100px;
+                min-width: 120px;
+            }
+            .btn--success{
+                background-color: #71be34;
+            }
+            .btn--warn{
+                background-color: #ffb702;
+            }
+            .btn--danger{
+                background-color: #ff623d;
+            }
+            .btn + .btn{
+                margin-left: 16px;
+            }
+            .btn:hover{
+                opacity: 0.8;
+            }
+            .btn--disabled{
+                opacity: 0.5 !important;
+                cursor: default;
+            }
+            .btn--s{
+                padding: 8px 44px;
+            }
+            .btn--l{
+                padding: 16px 52px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button class="btn btn--s btn--success btn--disabled">GO TO NEXT APPROVAL</button>
+            <button class="btn btn--s btn--warn">OK</button>
+            <button class="btn btn--s btn--danger">TRY AGAIN</button>
+        </div>
+        <div>
+            <button class="btn btn--success ">GO TO NEXT APPROVAL</button>
+            <button class="btn btn--warn btn--disabled">OK</button>
+            <button class="btn btn--danger">TRY AGAIN</button>
+        </div>
+        <div>
+            <button class="btn btn--l btn--success btn--disabled">GO TO NEXT APPROVAL</button>
+            <button class="btn btn--l btn--warn">OK</button>
+            <button class="btn btn--l btn--danger btn--disabled">TRY AGAIN</button>
+        </div>
+    </body>
+</html> 
